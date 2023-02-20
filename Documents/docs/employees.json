@@ -1,0 +1,32 @@
+{
+	"employees" : {
+		"employee" : [
+			{
+				"id" : 101, 
+				"firstname" : "Juan",
+				"lastname" : "Luna", 
+				"age": {"@classification": "teen", "#text" : 18}, 
+				"salary" : 10000.00,
+				"company": null
+			}, 
+			
+			{
+				"id" : 102, 
+				"firstname" : "Maria",
+				"lastname" : "Clara", 
+				"age": {"@classification": "adult", "#text" : 35},
+				"salary" : 15000.00,
+				"company": null
+			},
+			
+			{
+				"id" : 103, 
+				"firstname" : "Pedro",
+				"lastname" : "Cruz", 
+				"age": {"@classification": "senior", "#text" : 60},
+				"salary" : 15000.00,
+				"company": null
+			}
+		]
+	}
+}

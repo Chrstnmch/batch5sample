@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.ssglobal.org/training/employees" 
+		xmlns:tns="http://www.ssglobal.org/training/employees" 
+		elementFormDefault="qualified">
+		
+		<xs:element name="employees">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="employee" minOccurs="1" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name = "id" type = "xs:integer" default="100"/>
+								<xs:element name = "firstname">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:length value="4"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name = "lastname" type = "xs:string"/>
+								<xs:element name = "age" default = "18"> 
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="xs:integer">
+												<xs:attribute name="classification" type="xs:string"/>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element> 
+								<xs:element name = "salary" type = "xs:double" fixed="10000.00"/>
+								<xs:element name = "address" minOccurs="1" maxOccurs="unbounded"> 
+									<xs:complexType mixed="true">
+										<xs:all>
+											<xs:element name = "city" type="xs:string"/>
+											<xs:element name = "country" type = "xs:string"/>
+											<xs:element name = "zip" type = "xs:integer"/>
+										</xs:all>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name = "company">
+									<xs:complexType>
+										<xs:anyAttribute />
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name = "pk" type="xs:integer"/>
+							<xs:attribute name = "pos" type="xs:string" fixed="manager" use="required"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+</xs:schema>

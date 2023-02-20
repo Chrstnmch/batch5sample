@@ -1,0 +1,14 @@
+{
+	"profile": {
+		"firstname" : "Juan",
+		"lastname" : "Luna",
+		"age" : 45,
+		"salary" : 1000.00,
+		"unemployed" : true,
+		"friends" : ["Anna", "Lorna", "Fe"],
+		"vehicle" : {
+			"brand" : "Toyota",
+			"yearsUsed" : 45
+		}
+	}
+}

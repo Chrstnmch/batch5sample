@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT employees (employee)>
+<!ELEMENT employee (id | fname | lname | age | salary | address | company)*>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT address (#PCDATA | city | country | zip)*>
+<!ELEMENT company EMPTY>
+
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+
+<!ATTLIST employee pk CDATA "10">
+<!ATTLIST employee gender CDATA #REQUIRED>
+<!ATTLIST employee outbound CDATA #IMPLIED>
+<!ATTLIST employee pos CDATA #FIXED "manager">
+<!ATTLIST employee country (PH|BRZ|SPN|US|UK) #REQUIRED>

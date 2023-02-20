@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE employees SYSTEM  "employees.dtd"> -->
+<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		   xmlns="http://www.ssglobal.org/training/employees"
+		   xsi:schemaLocation="http://www.ssglobal.org/training/employees employees.xsd">
+	<employee pk="1" pos="manager">
+		<id></id>
+		<firstname>Juan</firstname>
+		<lastname>Luna</lastname>
+		<age>45</age>
+		<salary></salary>
+		<address>Sampaloc
+			<city>Manila</city>
+			<country>PH</country>
+			<zip>1003</zip>
+		</address>
+		<company />
+	</employee>
+	<employee  pos="manager">
+		<id>101</id>
+		<firstname>Mari</firstname>
+		<lastname>Clara</lastname>
+		<age>40</age>
+		<salary></salary>
+		<address>Metroville
+			<city>Binan</city>
+			<country>PH</country>
+			<zip>4024</zip>
+		</address>
+		<company/>
+	</employee>
+</employees>
